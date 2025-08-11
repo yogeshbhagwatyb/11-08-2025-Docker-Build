@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  user-service:
+    image: ${ECR_REGISTRY}/user-service:${IMAGE_TAG}
+    ports:
+      - "5001:5001"
+
+  product-service:
+    image: ${ECR_REGISTRY}/product-service:${IMAGE_TAG}
+    ports:
+      - "5002:5002"
